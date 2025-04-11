@@ -53,7 +53,7 @@ SHORTLINK_URL = environ.get('SHORTLINK_URL', 'dtglinks.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '6dee4f3664f21c141b04bc20dd28854017c26fb4')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'dtglinks.in')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '6dee4f3664f21c141b04bc20dd28854017c26fb4')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
@@ -80,7 +80,7 @@ INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
-PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
+PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan", "gujarati", "guj"]
 
